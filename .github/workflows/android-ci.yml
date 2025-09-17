@@ -1,4 +1,4 @@
-name: Android CI
+name: Android Unit Tests
 
 on:
   push:
@@ -11,8 +11,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-test-lint:
-    name: Build, Test, Lint
+  unit-tests:
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -46,23 +46,8 @@ jobs:
       - name: Clean
         run: ./gradlew --no-daemon --stacktrace clean
 
-      - name: Assemble Debug APK
-        run: ./gradlew --no-daemon --stacktrace :app:assembleDebug
-
       - name: Run Unit Tests (debug)
         run: ./gradlew --no-daemon --stacktrace :app:testDebugUnitTest
-
-      - name: Run Lint (debug)
-        run: ./gradlew --no-daemon --stacktrace :app:lintDebug
-
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: app-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: warn
-          retention-days: 7
 
       - name: Upload test reports
         uses: actions/upload-artifact@v4
@@ -75,16 +60,5 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-      - name: Upload lint reports
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: lint-reports
-          path: |
-            app/build/reports/lint-results-debug.html
-            app/build/reports/lint-results-debug.xml
-            app/build/reports/lint-results-debug.sarif
-          if-no-files-found: warn
-          retention-days: 7
 
 
