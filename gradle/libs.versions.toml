@@ -22,7 +22,9 @@ room = "2.8.0"
 kotlinxCoroutines = "1.10.2"
 androidxLintGradle = "1.0.0-alpha05"
 androidDesugarJdkLibs = "2.1.5"
-
+appcompat = "1.7.1"
+material = "1.13.0"
+androidxTracing = "1.3.0"
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,8 +41,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-
-
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+androidx-tracing-ktx = { group = "androidx.tracing", name = "tracing-ktx", version.ref = "androidxTracing" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
@@ -87,6 +89,8 @@ compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -101,9 +105,10 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room = { id = "androidx.room", version.ref = "room" }
 
-samples-android-library-compose = { id = "samplesandroid.android.library.compose" }
-samples-android-application-compose = { id = "samplesandroid.android.application.compose" }
-samples-android-application = { id = "samplesandroid.android.application" }
+samples-android-library-compose = { id = "samples.android.library.compose" }
+samples-android-application-compose = { id = "samples.android.application.compose" }
+samples-android-application = { id = "samples.android.application" }
 samples-hilt = { id = "samplesandroid.hiplest" }
-samples-android-room = { id = "samplesandroid.android.room" }
-samples-android-lint = { id = "samplesandroid.android.lint" }
+samples-android-room = { id = "samples.android.room" }
+samples-android-lint = { id = "samples.android.lint" }
+samples-android-library = { id = "samples.android.library" }

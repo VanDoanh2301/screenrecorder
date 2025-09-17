@@ -58,5 +58,14 @@ gradlePlugin {
             id = libs.plugins.samples.android.room.get().pluginId
             implementationClass = "AndroidRoomConventionPlugin"
         }
+        register("androidLibrary") {
+            id = libs.plugins.samples.android.library.asProvider().get().pluginId
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLint") {
+            id = libs.plugins.samples.android.lint.get().pluginId
+            implementationClass = "AndroidLintConventionPlugin"
+        }
     }
 }
+        
