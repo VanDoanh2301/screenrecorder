@@ -3,6 +3,12 @@ plugins {
     alias(libs.plugins.samples.android.library.compose)
 }
 
-dependencies {
+android {
+    namespace = "com.doanhtv.floating_window"
+}
 
+dependencies {}
+
+tasks {
+    register("Run floating window")
 }
