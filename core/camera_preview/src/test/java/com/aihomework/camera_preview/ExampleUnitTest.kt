@@ -1,4 +1,4 @@
-package com.aihomework.floating_window
+package com.aihomework.camera_preview
 
 import org.junit.Test
 

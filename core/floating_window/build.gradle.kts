@@ -4,11 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.doanhtv.floating_window"
+    namespace = "com.aihomework.floating_window"
 }
 
-dependencies {}
-
-tasks {
-    register("Run floating window")
+dependencies {
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.mockk)
+    testImplementation(libs.core.ktx)
 }

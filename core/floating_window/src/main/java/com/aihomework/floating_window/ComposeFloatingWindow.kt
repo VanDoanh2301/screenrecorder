@@ -1,5 +1,6 @@
+package com.aihomework.floating_window
 
-import android.R
+
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -77,7 +78,7 @@ class ComposeFloatingWindow(
             width = WindowManager.LayoutParams.WRAP_CONTENT
             format = PixelFormat.TRANSLUCENT
             gravity = Gravity.START or Gravity.TOP
-            windowAnimations = R.style.Animation_Dialog
+            windowAnimations = android.R.style.Animation_Dialog
             flags = (
                 WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
                     or WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
@@ -120,7 +121,7 @@ class ComposeFloatingWindow(
     fun show() {
         if (isAvailable().not()) return
         require(decorView.childCount != 0) {
-            "Content view cannot be empty"
+            ""
         }
         if (showing) {
             update()

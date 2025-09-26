@@ -1,3 +1,4 @@
+package com.aihomework.floating_window
 
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.compositionLocalOf

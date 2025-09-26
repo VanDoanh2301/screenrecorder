@@ -1,3 +1,5 @@
+package com.aihomework.floating_window
+
 import android.annotation.SuppressLint
 import android.graphics.Rect
 import androidx.compose.foundation.gestures.detectDragGestures
