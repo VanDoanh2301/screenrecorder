@@ -42,11 +42,24 @@ internal fun Project.configureAndroidCompose(
         }
 
         dependencies {
+            // ✅ Compose BOM
             val bom = libs.findLibrary("androidx-compose-bom").get()
             "implementation"(platform(bom))
             "androidTestImplementation"(platform(bom))
+            // ✅ Core UI
+            "implementation"(libs.findLibrary("androidx-ui").get())
+            "implementation"(libs.findLibrary("androidx-ui-graphics").get())
             "implementation"(libs.findLibrary("androidx-compose-ui-tooling-preview").get())
+            // ✅ Material + Icons
+            "implementation"(libs.findLibrary("androidx-material3").get())
+            "implementation"(libs.findLibrary("androidx-compose-material-icons").get())
+            // ✅ Navigation
+            "implementation"(libs.findLibrary("androidx-navigation-compose").get())
+            // ✅ Tooling & Debug
             "debugImplementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
+            // ✅ Testing
+            "androidTestImplementation"(libs.findLibrary("androidx-ui-test-junit4").get())
+            "debugImplementation"(libs.findLibrary("androidx-ui-test-manifest").get())
         }
 
         testOptions {

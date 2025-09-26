@@ -23,5 +23,5 @@ dependencyResolutionManagement {
 rootProject.name = "RecorderCompose"
 include(":app")
 includeBuild("build-logic")
-
 include(":core:data")
+include(":core:floating_window")
