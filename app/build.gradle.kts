@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.samples.hilt)
     alias(libs.plugins.samples.android.room)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.samples.android.application.flavors)
 }
 
 android {
@@ -39,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":ads"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -48,12 +50,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     
     implementation(libs.coil.kt)
-    implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.coroutines.guava)
-
-    ksp(libs.hilt.compiler)
-    ksp(libs.room.compiler)
+    implementation(libs.bundles.androidx.koin)
 
 
 }

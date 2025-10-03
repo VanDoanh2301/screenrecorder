@@ -66,6 +66,10 @@ gradlePlugin {
             id = libs.plugins.samples.android.lint.get().pluginId
             implementationClass = "AndroidLintConventionPlugin"
         }
+        register("androidFlavors") {
+            id = libs.plugins.samples.android.application.flavors.get().pluginId
+            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
+        }
     }
 }
         

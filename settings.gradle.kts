@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "BaseCompose"
 include(":app")
 includeBuild("build-logic")
-
+include(":ads")

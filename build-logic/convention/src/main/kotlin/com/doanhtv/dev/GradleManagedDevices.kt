@@ -54,6 +54,7 @@ internal fun configureGradleManagedDevices(
             }
         }
     }
+
 }
 
 private data class DeviceConfig(
