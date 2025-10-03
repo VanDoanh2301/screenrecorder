@@ -20,9 +20,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RecorderCompose"
+rootProject.name = "BaseCompose"
 include(":app")
 includeBuild("build-logic")
-include(":core:data")
-include(":core:floating_window")
-include(":core:camera_preview")
+

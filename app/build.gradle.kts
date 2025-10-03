@@ -7,10 +7,10 @@ plugins {
 }
 
 android {
-    namespace = "com.doanhtv.recordercompose"
+    namespace = "com.doanhtv.basecompose"
 
     defaultConfig {
-        applicationId = "com.doanhtv.recordercompose"
+        applicationId = "com.doanhtv.basecompose"
         versionCode = 1
         versionName = "1.0"
 
